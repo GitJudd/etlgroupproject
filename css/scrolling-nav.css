@@ -3,7 +3,7 @@ header {
 }
 
 section {
-  padding: 150px 0;
+  padding: 100px 0;
 }
 
 body {
@@ -40,12 +40,12 @@ body {
 }
 
 .flip-card-front {
-  background-color: #bbb;
-  color: black;
+  background-color: #003057;
+  color: #B3A369;
 }
 
 .flip-card-back {
-  background-color: #2980b9;
-  color: white;
+  background-color: #B3A369;
+  color: #003057;
   transform: rotateY(180deg);
 }
