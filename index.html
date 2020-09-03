@@ -48,7 +48,10 @@
             <a class="nav-link js-scroll-trigger" href="#mergedf">Merged Data</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#votes">Votes</a>
+            <a class="nav-link js-scroll-trigger" href="#wordcloud">Word Cloud</a>
+          </li>
+          <li class="toptv">
+            <a class="nav-link js-scroll-trigger" href="#toptv">Top Rated TV</a>
           </li>
         </ul>
       </div>
@@ -84,17 +87,27 @@
                 <blockquote class="blockquote">
                   <h3>Hover over the cards for more info and fun facts!</h3>
                 </blockquote>
-                  <p>&nbsp;</p>
                   <p><strong>Imports Used on this project</strong></p>
+                  <ul style="font-size:8px list-style-type:circle;">
+                    <li>import numpy as np</li>
+                    <li>import matplotlib.pyplot as plt</li>
+                    <li>import os</li>
+                    <li>import requests</li>
+                    <li>import pandas as pd</li>
+                    <li>import xml.etree.ElementTree as etree</li>
+                  </ul>
 					    </div>
 					    <div class="flip-card-back">
-						  	<p>from mpl_toolkits.mplot3d import Axes3D</p>
-					  		<p>from sklearn.preprocessing import StandardScaler</p>
-						  	<p>import matplotlib.pyplot as plt</p>
-							  <p>import numpy as np</p>
-				  			<p>import os </p>
-					  		<p>import pandas as pd </p>
-						  	<p>from xml.dom import minidom</p>
+                <p>&nbsp;</p>
+                <ul style="font-size:8px list-style-type:circle;">
+                  <li>from xml.dom import minidom</li>
+                  <li>from lxml import html, etree</li>
+                  <li>from mpl_toolkits.mplot3d import Axes3D</li>
+                  <li>from sklearn.preprocessing import StandardScaler</li>
+                  <li>from os import path</li>
+                  <li>from PIL import Image</li>
+                  <li>from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator</li>
+                  </ul>  
 					    </div>
 			      </div>
 		    </div>
@@ -108,7 +121,6 @@
             <div class="flip-card-back">
               <h3>Fullmetal Alchemist: Brotherhood</h3>
               <p>Brothers Edward and Alphonse Elric search for the Philsopher's Stone, hoping to restore their bodies, which were lost when they attempted to use their alchemy skills to resurrect their deceased mother. Edward, who lost only limbs, joins the State Military, which gives him the freedom to continue the search as he tries to restore his brother, whose soul is tethered to earth by a suit of armor. </p>
-
             </div>
           </div>
       </div>
@@ -125,36 +137,93 @@
           <p class="lead">Using an API, we were able to get an XML report that listed the top anime and a breakdown of their ratings with the total views and votes.</p>
           <hr>
           <p class="lead">From Kaggle, we discovered a CSV with the anime list, genre, type, and a different rating source. However, because of the limitations in translation, the two sources did not sync well for what we needed. Only a handful of the CSV names matched up with the API.
-            From there, we tracked down a different Kaggle CSV source that also included a breakdown of anime with the English, Japanese, and title synonyms. It also had the type, source, and a different, unique score system. This CSV included 14,478 titles that included Music, Movies, TV, OVAs, ONAs, and Specials!</p>
+            From there, we tracked down a different Kaggle CSV source that also included a breakdown of anime with the English, Japanese, and title synonyms. It also had the type, source, and a different, unique score system. Just to give an example of the data we worked with, this CSV included 14,478 titles that included Music, Movies, TV, OVAs, ONAs, and Specials!</p>
           <hr>
-          <h3>Project Sources:</h3>
-            <blockquote class="blockquote">
-              <p><a href="https://www.animenewsnetwork.com/encyclopedia/reports.xml?id=172">Top 50 anime and manga titles from animenewsnetwork - Part 1</a></p>
-              <footer class="blockquote-footer"><cite>Anime News Network</cite></footer>
-            </blockquote>
-            <blockquote class="blockquote">
-              <p><a href="https://www.animenewsnetwork.com/encyclopedia/reports.xml?id=173">Top 50 anime and manga titles from animenewsnetwork - Part 2</a></p>
-              <footer class="blockquote-footer"><cite>Anime News Network</cite></footer>
-            </blockquote>
-            <blockquote class="blockquote">
-              <p><a href="https://www.kaggle.com/filipefilardi/crunchyroll-anime-ratings">AnimeList Dataset- Part 1</a></p>
-              <footer class="blockquote-footer"><cite title="Kaggle">Kaggle</cite></footer>
-            </blockquote>
-            <blockquote class="blockquote">
-              <p><a href="https://www.kaggle.com/azathoth42/myanimelist">AnimeList Dataset- Part 2</a></p>
-              <footer class="blockquote-footer"><cite title="Kaggle">Kaggle</cite></footer>
-            </blockquote>
+         </div>
+         <div class="col-lg-6 mx-auto">
+		  	  <div class="flip-card">
+				    <div class="flip-card-inner">
+					    <div class="flip-card-front">
+                <img src="images/goku.png" alt="Goku DBZ" width="200px" height="300px">
+					    </div>
+					    <div class="flip-card-back">
+                <h5>API/XML Sources</h5>
+                <blockquote class="blockquote">
+                  <p><a href="https://www.animenewsnetwork.com/encyclopedia/reports.xml?id=172" target="_blank">Top 50 anime and manga titles from animenewsnetwork - Part 1</a></p>
+                  <footer class="blockquote-footer"><cite>Anime News Network</cite></footer>
+                </blockquote>
+                <blockquote class="blockquote">
+                  <p><a href="https://www.animenewsnetwork.com/encyclopedia/reports.xml?id=173" target="_blank">Top 50 anime and manga titles from animenewsnetwork - Part 2</a></p>
+                  <footer class="blockquote-footer"><cite>Anime News Network</cite></footer>
+                </blockquote> 
+					    </div>
+			      </div>
+		    </div>
+       </div>
+       <div class="col-lg-6 mx-auto">
+         <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/vegeta.png" alt="Vegeta DBZ" width="200px" height="300px">
+            </div>
+            <div class="flip-card-back">
+              <h5>CSV Sources</h5>
+              <blockquote class="blockquote">
+                <p><a href="https://www.kaggle.com/filipefilardi/crunchyroll-anime-ratings" target="_blank">AnimeList Dataset- Part 1</a></p>
+                <footer class="blockquote-footer"><cite title="Kaggle">Kaggle</cite></footer>
+              </blockquote>
+              <blockquote class="blockquote">
+                <p><a href="https://www.kaggle.com/azathoth42/myanimelist" target="_blank">AnimeList Dataset- Part 2</a></p>
+                <footer class="blockquote-footer"><cite title="Kaggle">Kaggle</cite></footer>
+              </blockquote>  
+            </div>
           </div>
+      </div>
+     </div>
       </div>
     </div>
   </section>
-  <section id="contact">
+  <section id="wordcloud">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2>Contact us</h2>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
-        </div>
+          <h2>Word Cloud</h2>
+         
+         </div>
+         <div class="col-lg-6 mx-auto">
+		  	  <div class="flip-card">
+				    <div class="flip-card-inner">
+					    <div class="flip-card-front">
+                <img src="images/word_cloud.png" alt="Goku DBZ" width="290px" height="290px">
+					    </div>
+					    <div class="flip-card-back">
+                <img src="images/word_cloud2.png" alt="Goku DBZ" width="290px" height="290px">
+					    </div>
+			      </div>
+		    </div>
+       </div>
+       <div class="col-lg-6 mx-auto">
+         <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/swordart.png" alt="Sword Art Onilne" width="259px" height="297px">
+            </div>
+            <div class="flip-card-back">
+              <h3>Sword Art Online</h3>
+              <P>In 2022, a virtual reality massively multiplayer online role-playing game (VRMMORPG) called Sword Art Online (SAO) is released. With the NerveGear, a helmet that stimulates the user's five senses via their brain, players can experience and control their in-game characters with their minds.</P>
+            </div>
+          </div>
+      </div>
+     </div>
+      </div>
+    </div>
+  </section>
+  <section id="toptv">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mx-auto">
+          <h2>Top TV Shows</h2>
+          <iframe width="85%" height="500px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS6UTl-sepdz7VeD9fvtqJQ_F-gpXwBgC54dcy7xZXn1aH5XY8stviaWCA__x4mtzpznwqCgsvdv8ad/pubhtml?widget=true&amp;headers=false"></iframe>        </div>
       </div>
     </div>
   </section>
