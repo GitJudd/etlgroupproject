@@ -36,20 +36,23 @@
             <a class="nav-link js-scroll-trigger" href="#api">APIs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#animecsv">CSV</a>
+            <a class="nav-link js-scroll-trigger" href="#longtv">Longest Series</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="mergedf.html">Dataframe</a>
+            <a class="nav-link js-scroll-trigger" href="#manga">Manga Related</a>
           </li>
            <li class="toptv">
             <a class="nav-link js-scroll-trigger" href="#toptv">Top Rated TV</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#" onClick="window.open('mergedf.html','Top Overall - Dataframe','resizable,height=960,width=1280'); return false;">Top Merged Dataframe</a><noscript>You need Javascript to use the previous link or use <a href="mergedf.html" target="_blank">Top Merged Dataframe</a></noscript>
+          </li>
           <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Plotly Graphs</a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="anime treemap.html">Anime Treemap</a>
-          <a class="dropdown-item" href="manga treemap.html">Manga Treemap</a>
-          <a class="dropdown-item" href="images/word_cloud.png">Wordcloud</a>
+          <a class="dropdown-item" href="#" onClick="window.open('anime treemap.html','Anime Treemap','resizable,height=960,width=1280'); return false;">Anime Treemap</a><noscript>You need Javascript to use the previous link or use <a href="anime treemap.html" target="_blank">Anime Treemap</a></noscript>
+          <a class="dropdown-item" href="#" onClick="window.open('manga treemap.html','Manga Treemap','resizable,height=960,width=1280'); return false;">Manga Treemap</a><noscript>You need Javascript to use the previous link or use <a href="manga treemap.html" target="_blank">Manga Treemap</a></noscript>
+          <a class="dropdown-item" href="#" onClick="window.open('images/word_cloud.png','Wordcloud','resizable,height=960,width=1280'); return false;">Wordcloud</a><noscript>You need Javascript to use the previous link or use <a href="images/word_cloud.png" target="_blank">Wordcloud</a></noscript>
         </div>
       </li>
         </ul>
@@ -70,7 +73,7 @@
           <h2>About</h2>
           <p class="lead">This site is the landing page for a Georgia Tech Bootcamp Spot project report. It is the culmination of a group effort from students that are not actually employees of Crunchyroll or any other anime team. </p>
           <hr>
-          <p class="lead">We’re working as if we’re on the Crunchyroll analyst team and we’re looking for popular anime to replace some of the lesser popular shows/movies on our system. We will use various published anime rankings as well as an API to pull the library of anime on the system. To do this, we’ll look at the genre of what people are watching and use that and potential user ratings to make the determination. </p>
+          <p class="lead">We’re working as if we’re on the Crunchyroll analyst team and we’re looking for popular anime. We will use various published anime rankings as well as an API to pull the initial data. We want to see if the length of a series impacts its popularity. We also want to see if having a manga reference for an anime has any relation to its popularity as a TV show. </p>
         </div>
       </div>
     </div>
@@ -181,26 +184,19 @@
      </div>
       </div>
     </div>
-     </div>
-  					    <div class="flip-card-back">
-                <img src="images/word_cloud2.png" alt="Goku DBZ" width="290px" height="290px">
-					    </div>
-			      </div>
-		    </div>
-       </div>
-       <div class="col-lg-6 mx-auto">
-         <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img src="images/swordart.png" alt="Sword Art Onilne" width="259px" height="297px">
-            </div>
-            <div class="flip-card-back">
-              <h3>Sword Art Online</h3>
-              <P>In 2022, a virtual reality massively multiplayer online role-playing game (VRMMORPG) called Sword Art Online (SAO) is released. With the NerveGear, a helmet that stimulates the user's five senses via their brain, players can experience and control their in-game characters with their minds.</P>
-            </div>
-          </div>
-      </div>
-     </div>
+  </section>
+  <section id="longtv" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mx-auto">
+          <h2>Longest TV Shows</h2>
+          <p>Looking for the longest shows available on Crunchyroll to waste some time? Here we compare them to see how they fared against each other. <br /> To get the information, we removed the irrelevant columns and looked for shows with over 100 episodes. The ratings were available. Before we get to the longest series, we decided to take a look at the least popular, longest lasting shows!</p>
+          <p><img src="images/longleast.PNG" alt="Least Popular long shows"></p>
+          <p>Unfortunately, all 3 of those made the final "longest series" list. Be careful in your show selections if you are looking to binge something.</p>
+          <hr>
+          <p>Here we have the longest shows, ignoring rating:</p>
+          <img src="images/Longest Series in Crunchyroll.png" alt="Longest Shows - Graph">        
+        </div>
       </div>
     </div>
   </section>
@@ -209,11 +205,46 @@
       <div class="row">
         <div class="col-lg-12 mx-auto">
           <h2>Top TV Shows</h2>
-          <iframe width="85%" height="500px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS6UTl-sepdz7VeD9fvtqJQ_F-gpXwBgC54dcy7xZXn1aH5XY8stviaWCA__x4mtzpznwqCgsvdv8ad/pubhtml?widget=true&amp;headers=false"></iframe>        </div>
+          <iframe width="85%" height="500px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS6UTl-sepdz7VeD9fvtqJQ_F-gpXwBgC54dcy7xZXn1aH5XY8stviaWCA__x4mtzpznwqCgsvdv8ad/pubhtml?widget=false&headers=false&chrome=false"></iframe>        
+        </div>
       </div>
     </div>
   </section>
 
+  <section id="extra" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mx-auto">
+		  	  <div class="flip-card">
+				    <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="images/fairytail.png" alt="Full Metal Jacket" width="402px" height="253px">
+              </div>
+              <div class="flip-card-back">
+                <h3>Fairy Tail</h3>
+                <p>The world of Earth-land is home to numerous guilds where wizards[a] apply their magic for paid job requests. Natsu Dragneel, a dragon slayer wizard from the Fairy Tail guild, explores the Kingdom of Fiore in search of his missing adoptive father, the dragon Igneel.</p>
+              </div>
+			      </div>
+		    </div>
+       </div>
+       <div class="col-lg-6 mx-auto">
+         <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/naruto.png" alt="Full Metal Jacket" width="222px" height="300px">
+            </div>
+            <div class="flip-card-back">
+              <h3>Naruto</h3>
+              <p>It tells the story of Naruto Uzumaki, a young ninja who seeks recognition from his peers and dreams of becoming the Hokage, the leader of his village. </p>
+              <p>Featured in Image: Kakashi Hatake </p>
+              <p>In the story, Kakashi is the teacher of Team 7, consisting of the series' primary characters, Naruto Uzumaki, Sasuke Uchiha, and Sakura Haruno.</p>
+            </div>
+          </div>
+      </div>
+     </div>
+		  </div>
+    </div>
+  </section>
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
