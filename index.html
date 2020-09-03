@@ -20,7 +20,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Anime Ratings</a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Team Cyndaquil</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -55,7 +55,7 @@
     </div>
   </nav>
 
-  <header class="bg-primary text-white">
+  <header class="bg-primary text-techb headerbg">
     <div class="container text-center">
       <h1>Anime Ratings</h1>
     </div>
@@ -65,7 +65,9 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2>About this Project</h2>
+          <h2>About</h2>
+          <p class="lead">This site is the landing page for a Georgia Tech Bootcamp Spot project report. It is the culmination of a group effort from students that are not actually employees of Crunchyroll or any other anime team. </p>
+          <hr>
           <p class="lead">We’re working as if we’re on the Crunchyroll analyst team and we’re looking for popular anime to replace some of the lesser popular shows/movies on our system. We will use various published anime rankings as well as an API to pull the library of anime on the system. To do this, we’ll look at the genre of what people are watching and use that and potential user ratings to make the determination. </p>
         </div>
       </div>
@@ -75,29 +77,69 @@
   <section id="import" class="bg-light">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
-			<h5>Hover over the image to see the code used:</h5>
-				<div class="flip-card">
-					<div class="flip-card-inner">
-						<div class="flip-card-front">
-							<h3>Imports used</h3>
-						</div>
-						<div class="flip-card-back">
-							<p>from mpl_toolkits.mplot3d import Axes3D</p>
-							<p>from sklearn.preprocessing import StandardScaler</p>
-							<p>import matplotlib.pyplot as plt</p>
-							<p>import numpy as np</p>
-							<p>import os </p>
-							<p>import pandas as pd </p>
-							<p>from xml.dom import minidom</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+        <div class="col-lg-6 mx-auto">
+		  	  <div class="flip-card">
+				    <div class="flip-card-inner">
+					    <div class="flip-card-front">
+                  <h3>Hover over the cards for more info</h3>
+                  <p>Imports Used</p>
+					    </div>
+					    <div class="flip-card-back">
+						  	<p>from mpl_toolkits.mplot3d import Axes3D</p>
+					  		<p>from sklearn.preprocessing import StandardScaler</p>
+						  	<p>import matplotlib.pyplot as plt</p>
+							  <p>import numpy as np</p>
+				  			<p>import os </p>
+					  		<p>import pandas as pd </p>
+						  	<p>from xml.dom import minidom</p>
+					    </div>
+			      </div>
+		    </div>
+       </div>
+       <div class="col-lg-6 mx-auto">
+         <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/fullmetal.png" alt="Full Metal Jacket" width="200px" height="300px">
+            </div>
+            <div class="flip-card-back">
+              <h3>Fullmetal Alchemist: Brotherhood</h3>
+              <p>Brothers Edward and Alphonse Elric search for the Philsopher's Stone, hoping to restore their bodies, which were lost when they attempted to use their alchemy skills to resurrect their deceased mother. Edward, who lost only limbs, joins the State Military, which gives him the freedom to continue the search as he tries to restore his brother, whose soul is tethered to earth by a suit of armor. </p>
+
+            </div>
+          </div>
+      </div>
+     </div>
+		  </div>
     </div>
   </section>
 
+  <section id="api">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>APIs and Data collection</h2>
+          <p class="lead">Using an API, we were able to get an XML report that listed the top anime and a breakdown of their ratings with the total views and votes.</p>
+          <hr>
+          <p class="lead">From Kaggle, we discovered a CSV with the anime list, genre, type, and a different rating source. However, because of the limitations in translation, the two sources did not sync well. Only a handful of the CSV names matched up with the API.
+            From there, we tracked down a different Kaggle CSV source that also included a breakdown of anime with the English, Japanese, and title synonyms. It also had the type, source, and a different, unique score system. This CSV included 14,478 titles that included Music, Movies, TV, OVAs, ONAs, and Specials. 
+            The first step was to separate some of this information with a focus on TV shows and Movies as that is the target for our additions. </p>
+            <blockquote class="blockquote text-success">
+              <p>API Source Link</p>
+              <footer class="blockquote-footer">API Source Name</footer>
+            </blockquote>
+            <blockquote class="blockquote text-success">
+              <p><a href="https://www.kaggle.com/filipefilardi/crunchyroll-anime-ratings"><del>Crunchyroll Animes Database - Abandoned</del></a></p>
+              <footer class="blockquote-footer"><cite title="Kaggle">Kaggle</cite></footer>
+            </blockquote>
+            <blockquote class="blockquote text-success">
+              <p><a href="https://www.kaggle.com/azathoth42/myanimelist">AnimeList Dataset- Used</a></p>
+              <footer class="blockquote-footer"><cite title="Kaggle">Kaggle</cite></footer>
+            </blockquote>
+          </div>
+      </div>
+    </div>
+  </section>
   <section id="contact">
     <div class="container">
       <div class="row">
