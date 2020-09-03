@@ -30,10 +30,18 @@
   <body>
 <div class="jumbotron">
   <h1 class="display-3">Dataframe Background</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-  <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  </div>
+   <p class="lead">The process to create the Merged Dataframe</p>
+   <p class="my-4">#1.	I downloaded the top 50 anime and manga titles from animenewsnetwork</p>
+   <p class="my-4"> #a.	"https://www.animenewsnetwork.com/encyclopedia/reports.xml?id=172"</p>
+   <p class="my-4"> #b.	"https://www.animenewsnetwork.com/encyclopedia/reports.xml?id=173"</p>
+   <p class="my-4"> #2.	Using the xml.etree.Elementree module I converted both XMLs to Dataframes</p>
+   <p class="my-4"> #3.	Using panda df.merge, I outer merged both converted Dataframes into one list_df Dataframe</p>
+   <p class="my-4">  #4.	I then used dtypes to determine the type of each column</p>
+   <p class="my-4">  #5.	For all columns which had numerical values I converted the columns from objects to float64 types</p>
+   <p class="my-4">  #6.	Next I moved the Manga name column from the end next to the Anime name column</p>
+   <p class="my-4"> #7.	Finally I sorted the final Dataframe by nb_seen first and straight_average second, to ensure that any potential outliers are not being used for the top anime and manga categories</p>
+</p>
+    </div>
 
 
       <table border="1" class="dataframe table-bordered table-striped table-hover">
